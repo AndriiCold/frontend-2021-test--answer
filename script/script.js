@@ -3,25 +3,26 @@ const myArr = Array.from(String(pandemicStartMap), Number);
 
 //Pandemic start
 
-let PandemicStart = document.getElementById("PandemicStart");
+let pandemicStart = document.getElementById("pandemicStart");
 let corona = null;
-for (var i=0; i <myArr.length; i++) {
-    if(isNaN(myArr[i])){
-        corona = document.createElement("div");
-        PandemicStart.before(corona);
-        corona.classList.add("ocean");
-    }
-    else if (myArr[i] ===0){
-        corona = document.createElement("div");
-        PandemicStart.before(corona);
-        corona.classList.add("uninfected");
-    }
-    else if (myArr[i]>0){
-        corona = document.createElement("div");
-        PandemicStart.before(corona);
-        corona.classList.add("infected");
+function pandemic(argument = pandemicStart) {
+    for (var i = 0; i < myArr.length; i++) {
+        if (isNaN(myArr[i])) {
+            corona = document.createElement("div");
+            argument.before(corona);
+            corona.classList.add("ocean");
+        } else if (myArr[i] === 0) {
+            corona = document.createElement("div");
+            argument.before(corona);
+            corona.classList.add("uninfected");
+        } else if (myArr[i] > 0) {
+            corona = document.createElement("div");
+            argument.before(corona);
+            corona.classList.add("infected");
+        }
     }
 }
+pandemic();
 
 //Pandemic end
 
@@ -45,25 +46,8 @@ for (var n = 0; n < myArr.length; n++) {
     }
 }
 
-let PandemicEnd = document.getElementById("PandemicEnd");
-
-for (var g=0; g <myArr.length; g++) {
-    if(isNaN(myArr[g])){
-        corona = document.createElement("div");
-        PandemicEnd.before(corona);
-        corona.classList.add("ocean");
-    }
-    else if (myArr[g] ===0){
-        corona = document.createElement("div");
-        PandemicEnd.before(corona);
-        corona.classList.add("uninfected");
-    }
-    else if (myArr[g]>0){
-        corona = document.createElement("div");
-        PandemicEnd.before(corona);
-        corona.classList.add("infected");
-    }
-}
+let pandemicEnd = document.getElementById("pandemicEnd");
+pandemic(argument=pandemicEnd);
 
 //Total
 

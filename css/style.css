@@ -2,20 +2,24 @@
     background-position: top center;
     min-width: 960px;
     margin: 0;
-    padding-left: 200px;
+
     font-family: 'PT Sans Narrow', Arial, sans-serif;
     font-size: 14px;
     line-height: 24px;
     font-weight: 700;
     text-transform: uppercase;
     }
+.container {
+    display: flex;
+    width: 940px;
+    margin: 1% auto;
+    padding: 0 10px;
+}
 
 .uninfected {
-    float: left;
-    display: block;
     margin-right: 5px;
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     padding: 0;
     border: 5px solid #000000;
     background-color: green;
@@ -24,11 +28,9 @@
 }
 
 .infected {
-    float: left;
-    display: block;
     margin-right: 5px;
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     padding: 0;
     border: 5px solid #000000;
     background-color: red;
@@ -37,11 +39,9 @@
 }
 
 .ocean{
-    float: left;
-    display: block;
     margin-right: 5px;
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     padding: 0;
     border: 5px solid #000000;
     background-color: blue;
@@ -49,17 +49,8 @@
     animation: shake 0.6s;
 }
 
-.item1 {
-    width: 25px;
-    height: 25px;
-    padding: 0;
-    border: 5px solid  #000000;
-    background-color: slategray;
-}
 
-.clearfix{
-    clear: both;
-}
+
 
 @keyframes shake {
     0%,100% {transform:translateX(0);}
